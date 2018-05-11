@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C97C89DF841040D45ED572AAFCC000D0"
+               BlueprintIdentifier = "FA51A406DA8D1EC64CB5D6A15C00FA63"
                BuildableName = "Pods_HNRScanner.framework"
                BlueprintName = "Pods-HNRScanner"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C97C89DF841040D45ED572AAFCC000D0"
+            BlueprintIdentifier = "FA51A406DA8D1EC64CB5D6A15C00FA63"
             BuildableName = "Pods_HNRScanner.framework"
             BlueprintName = "Pods-HNRScanner"
             ReferencedContainer = "container:Pods.xcodeproj">
