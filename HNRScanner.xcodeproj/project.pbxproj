@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		82392AE020A58F3500E8CEA2 /* RegisterSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82392ADF20A58F3500E8CEA2 /* RegisterSuccessViewController.swift */; };
+		9302888420A5A6D6000671CC /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9302888320A5A6D6000671CC /* FirebaseManager.swift */; };
 		9396E65B20A57F8500D6888A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9396E65A20A57F8500D6888A /* AppDelegate.swift */; };
 		9396E65D20A57F8500D6888A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9396E65C20A57F8500D6888A /* BaseViewController.swift */; };
 		9396E66020A57F8500D6888A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9396E65E20A57F8500D6888A /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		33A8DAF1EADA3B9FF04AFB60 /* Pods-HNRScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNRScanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNRScanner/Pods-HNRScanner.release.xcconfig"; sourceTree = "<group>"; };
 		6EE063775D564AF31A9E0C5B /* Pods-HNRScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNRScanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNRScanner/Pods-HNRScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		82392ADF20A58F3500E8CEA2 /* RegisterSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterSuccessViewController.swift; sourceTree = "<group>"; };
+		9302888320A5A6D6000671CC /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		9396E65720A57F8500D6888A /* HNRScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNRScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9396E65A20A57F8500D6888A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9396E65C20A57F8500D6888A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				9396E66320A57F8600D6888A /* LaunchScreen.storyboard */,
 				9396E66620A57F8600D6888A /* Info.plist */,
 				82392ADF20A58F3500E8CEA2 /* RegisterSuccessViewController.swift */,
+				9302888320A5A6D6000671CC /* FirebaseManager.swift */,
 			);
 			path = HNRScanner;
 			sourceTree = "<group>";
@@ -103,7 +106,6 @@
 				9396E65420A57F8500D6888A /* Frameworks */,
 				9396E65520A57F8500D6888A /* Resources */,
 				0DE9D140587FC01CCB75857C /* [CP] Embed Pods Frameworks */,
-				A9A8C292324A8A7FC0FEE00A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,10 +171,28 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HNRScanner/Pods-HNRScanner-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -197,21 +217,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A9A8C292324A8A7FC0FEE00A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNRScanner/Pods-HNRScanner-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9302888420A5A6D6000671CC /* FirebaseManager.swift in Sources */,
 				82392AE020A58F3500E8CEA2 /* RegisterSuccessViewController.swift in Sources */,
 				9396E65D20A57F8500D6888A /* BaseViewController.swift in Sources */,
 				9396E65B20A57F8500D6888A /* AppDelegate.swift in Sources */,
@@ -370,10 +376,7 @@
 				DEVELOPMENT_TEAM = W76H98A34A;
 				INFOPLIST_FILE = HNRScanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.nushackers.HNRScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -390,10 +393,7 @@
 				DEVELOPMENT_TEAM = W76H98A34A;
 				INFOPLIST_FILE = HNRScanner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.nushackers.HNRScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

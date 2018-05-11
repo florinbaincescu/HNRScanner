@@ -7,5 +7,7 @@ target 'HNRScanner' do
 
   # Pods for HNRScanner
   pod 'BarcodeScanner'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 
 end
