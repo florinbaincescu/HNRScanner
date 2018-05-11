@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DB618E49EB45C24E43CF3C7 /* Pods_HNRScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FA9EB6C46690D54BC686AF /* Pods_HNRScanner.framework */; };
 		9396E65B20A57F8500D6888A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9396E65A20A57F8500D6888A /* AppDelegate.swift */; };
 		9396E65D20A57F8500D6888A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9396E65C20A57F8500D6888A /* ViewController.swift */; };
 		9396E66020A57F8500D6888A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9396E65E20A57F8500D6888A /* Main.storyboard */; };
 		9396E66220A57F8600D6888A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9396E66120A57F8600D6888A /* Assets.xcassets */; };
 		9396E66520A57F8600D6888A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9396E66320A57F8600D6888A /* LaunchScreen.storyboard */; };
+		9396E66D20A5859600D6888A /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9396E66C20A5859600D6888A /* FirebaseManager.swift */; };
+		9396E66F20A5892100D6888A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9396E66E20A5892100D6888A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		9396E66120A57F8600D6888A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9396E66420A57F8600D6888A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9396E66620A57F8600D6888A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9396E66C20A5859600D6888A /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		9396E66E20A5892100D6888A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AAD2C65B55C915D4801CE760 /* Pods-HNRScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNRScanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNRScanner/Pods-HNRScanner.debug.xcconfig"; sourceTree = "<group>"; };
+		D3FA9EB6C46690D54BC686AF /* Pods_HNRScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNRScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5C130DB5586DD3C6B3528DE /* Pods-HNRScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNRScanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNRScanner/Pods-HNRScanner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB618E49EB45C24E43CF3C7 /* Pods_HNRScanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82E59C076DC62B7BAC00342E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA9EB6C46690D54BC686AF /* Pods_HNRScanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9396E64E20A57F8500D6888A = {
 			isa = PBXGroup;
 			children = (
 				9396E65920A57F8500D6888A /* HNRScanner */,
 				9396E65820A57F8500D6888A /* Products */,
+				F2A221E16DE1E85886AD60C4 /* Pods */,
+				82E59C076DC62B7BAC00342E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +79,19 @@
 				9396E66120A57F8600D6888A /* Assets.xcassets */,
 				9396E66320A57F8600D6888A /* LaunchScreen.storyboard */,
 				9396E66620A57F8600D6888A /* Info.plist */,
+				9396E66C20A5859600D6888A /* FirebaseManager.swift */,
+				9396E66E20A5892100D6888A /* GoogleService-Info.plist */,
 			);
 			path = HNRScanner;
+			sourceTree = "<group>";
+		};
+		F2A221E16DE1E85886AD60C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAD2C65B55C915D4801CE760 /* Pods-HNRScanner.debug.xcconfig */,
+				D5C130DB5586DD3C6B3528DE /* Pods-HNRScanner.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9396E66920A57F8600D6888A /* Build configuration list for PBXNativeTarget "HNRScanner" */;
 			buildPhases = (
+				DC51AD334C4B5AB85867F0B6 /* [CP] Check Pods Manifest.lock */,
 				9396E65320A57F8500D6888A /* Sources */,
 				9396E65420A57F8500D6888A /* Frameworks */,
 				9396E65520A57F8500D6888A /* Resources */,
+				629246EF5CEBE55C8ADE69E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9396E66520A57F8600D6888A /* LaunchScreen.storyboard in Resources */,
+				9396E66F20A5892100D6888A /* GoogleService-Info.plist in Resources */,
 				9396E66220A57F8600D6888A /* Assets.xcassets in Resources */,
 				9396E66020A57F8500D6888A /* Main.storyboard in Resources */,
 			);
@@ -130,11 +163,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		629246EF5CEBE55C8ADE69E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HNRScanner/Pods-HNRScanner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BarcodeScanner/BarcodeScanner.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BarcodeScanner.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNRScanner/Pods-HNRScanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC51AD334C4B5AB85867F0B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HNRScanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9396E65320A57F8500D6888A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9396E66D20A5859600D6888A /* FirebaseManager.swift in Sources */,
 				9396E65D20A57F8500D6888A /* ViewController.swift in Sources */,
 				9396E65B20A57F8500D6888A /* AppDelegate.swift in Sources */,
 			);
@@ -278,6 +355,7 @@
 		};
 		9396E66A20A57F8600D6888A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAD2C65B55C915D4801CE760 /* Pods-HNRScanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +375,7 @@
 		};
 		9396E66B20A57F8600D6888A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5C130DB5586DD3C6B3528DE /* Pods-HNRScanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
